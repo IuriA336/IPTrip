@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-i18n-title="meta.dashboardTitle">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - IPTrip</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html" class="logo-link">
+                            <i class="fas fa-plane-departure logo-icon"></i>
+                            <span class="logo-text">IPTrip</span>
+                        </a>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="destinos.html" data-i18n="nav.destinations">Destinos</a></li>
+                        <li><a href="pacotes.html" data-i18n="nav.packages">Pacotes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contacto</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="lang-switcher" id="langSwitcher">
+                            <button class="lang-switcher-btn nav-btn" id="langSwitcherBtn" type="button" aria-haspopup="listbox" aria-expanded="false" data-i18n-title="lang.select">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-switcher-label" id="langSwitcherLabel">PT</span>
+                                <i class="fas fa-chevron-down lang-switcher-chevron"></i>
+                            </button>
+                            <ul class="lang-switcher-menu" id="langSwitcherMenu" role="listbox">
+                                <li role="option"><button type="button" data-lang="pt" class="lang-option active" aria-selected="true">Português</button></li>
+                                <li role="option"><button type="button" data-lang="en" class="lang-option" aria-selected="false">English</button></li>
+                                <li role="option"><button type="button" data-lang="fr" class="lang-option" aria-selected="false">Français</button></li>
+                                <li role="option"><button type="button" data-lang="es" class="lang-option" aria-selected="false">Español</button></li>
+                            </ul>
+                        </div>
+                        <a href="wishlist.html" class="nav-btn wishlist-nav-btn" data-i18n-title="nav.wishlistTitle">
+                            <i class="fas fa-heart"></i>
+                            <span class="nav-btn-label" data-i18n="nav.wishlist">Desejos</span>
+                            <span class="wishlist-count" id="wishlistCount" style="display:none">0</span>
+                        </a>
+                        <a href="dashboard.html" class="nav-btn client-nav-btn active" id="clientNavBtn" data-i18n-title="nav.clientArea">
+                            <i class="fas fa-user"></i>
+                            <span class="nav-btn-label" id="clientNavLabel" data-i18n="nav.dashboard">Dashboard</span>
+                        </a>
+                        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-layout">
+                <!-- Sidebar -->
+                <aside class="dashboard-sidebar">
+                    <div class="sidebar-profile">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3 class="client-name" id="clientName" data-i18n="common.loading">Carregando...</h3>
+                        <p class="client-email" id="clientEmail"></p>
+                    </div>
+                    <nav class="dashboard-menu">
+                        <a href="#" class="active" data-section="overview"><i class="fas fa-home"></i> <span data-i18n="dashboard.overview">Visao Geral</span></a>
+                        <a href="#" data-section="wishlist"><i class="fas fa-heart"></i> <span data-i18n="dashboard.wishlist">Lista de Desejos</span></a>
+                        <a href="#" data-section="bookings"><i class="fas fa-calendar-check"></i> <span data-i18n="dashboard.bookings">Reservas</span></a>
+                        <a href="#" data-section="settings"><i class="fas fa-cog"></i> <span data-i18n="dashboard.settings">Definicoes</span></a>
+                        <a href="#" data-section="logout"><i class="fas fa-sign-out-alt"></i> <span data-i18n="dashboard.logout">Sair</span></a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="dashboard-main">
+                    <!-- Overview -->
+                    <div class="dashboard-panel active" id="overview">
+                        <h2><i class="fas fa-home"></i> <span data-i18n="dashboard.overview">Visao Geral</span></h2>
+                        <p><span data-i18n="dashboard.welcome">Bem-vindo ao seu painel,</span> <strong class="client-name"></strong>!</p>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="statDreams">0</span>
+                                    <span class="stat-label" data-i18n="dashboard.statDreams">Destinos Desejados</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="statBookings">0</span>
+                                    <span class="stat-label" data-i18n="dashboard.statBookings">Reservas</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label" data-i18n="dashboard.statAvailable">Destinos Disponiveis</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Wishlist Preview -->
+                        <div class="panel-section">
+                            <h3><i class="fas fa-heart"></i> <span data-i18n="dashboard.dreamDestinations">Os Seus Destinos de Sonho</span></h3>
+                            <div class="wishlist-preview" id="wishlistPreview">
+                                <p class="empty-state"><i class="fas fa-heart-broken"></i> <span data-i18n="dashboard.emptyWishlistPreview">Ainda nao adicionou destinos a sua lista de desejos.</span> <a href="destinos.html" data-i18n="common.exploreDestinations">Explorar destinos</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist Panel -->
+                    <div class="dashboard-panel" id="wishlist">
+                        <h2><i class="fas fa-heart"></i> <span data-i18n="dashboard.wishlistPanelTitle">Lista de Desejos</span></h2>
+                        <p data-i18n="dashboard.wishlistPanelDesc">Os destinos que marcou como favoritos</p>
+                        <div class="wishlist-full" id="wishlistFull">
+                            <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> <span data-i18n="common.loading">Carregando...</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Bookings Panel -->
+                    <div class="dashboard-panel" id="bookings">
+                        <h2><i class="fas fa-calendar-check"></i> <span data-i18n="dashboard.bookingsTitle">Minhas Reservas</span></h2>
+                        <p data-i18n="dashboard.bookingsDesc">Acompanhe as suas reservas</p>
+                        <div class="bookings-list" id="bookingsList">
+                            <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> <span data-i18n="common.loading">Carregando...</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Panel -->
+                    <div class="dashboard-panel" id="settings">
+                        <h2><i class="fas fa-cog"></i> <span data-i18n="dashboard.settingsTitle">Definicoes</span></h2>
+                        <p data-i18n="dashboard.settingsDesc">Gerencie as suas informacoes pessoais</p>
+                        <div class="settings-info">
+                            <div class="info-row">
+                                <label data-i18n="dashboard.labelName">Nome:</label>
+                                <span class="client-name"></span>
+                            </div>
+                            <div class="info-row">
+                                <label data-i18n="dashboard.labelEmail">E-mail:</label>
+                                <span class="client-email"></span>
+                            </div>
+                            <div class="info-row">
+                                <label data-i18n="dashboard.labelPhone">Telefone:</label>
+                                <span class="client-phone" id="clientPhone">-</span>
+                            </div>
+                            <div class="info-row">
+                                <label data-i18n="dashboard.labelSince">Membro desde:</label>
+                                <span class="client-since" id="clientSince">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-plane-departure"></i>
+                        <span>IPTrip</span>
+                    </div>
+                    <p data-i18n="footer.about">A sua agência de viagens premium. Experiências únicas e personalizadas para os destinos mais incríveis.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.quickLinks">Links Rápidos</h4>
+                    <ul>
+                        <li><a href="destinos.html" data-i18n="nav.destinations">Destinos</a></li>
+                        <li><a href="pacotes.html" data-i18n="nav.packages">Pacotes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.support">Suporte</h4>
+                    <ul>
+                        <li><a href="contato.html" data-i18n="footer.helpCenter">Centro de Ajuda</a></li>
+                        <li><a href="politica-privacidade.html" data-i18n="footer.privacy">Política de Privacidade</a></li>
+                        <li><a href="termos-uso.html" data-i18n="footer.terms">Termos de Uso</a></li>
+                        <li><a href="contato.html#faq" data-i18n="footer.faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact">Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> iptrip.pap@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +351 913 520 306</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="common.copyright">&copy; 2024 IPTrip. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/currency.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

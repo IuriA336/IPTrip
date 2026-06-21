@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-i18n-title="meta.termosTitle">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso - IPTrip</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html" class="logo-link">
+                            <i class="fas fa-plane-departure logo-icon"></i>
+                            <span class="logo-text">IPTrip</span>
+                        </a>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="destinos.html" data-i18n="nav.destinations">Destinos</a></li>
+                        <li><a href="pacotes.html" data-i18n="nav.packages">Pacotes</a></li>
+                        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contacto</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="lang-switcher" id="langSwitcher">
+                            <button class="lang-switcher-btn nav-btn" id="langSwitcherBtn" type="button" aria-haspopup="listbox" aria-expanded="false" data-i18n-title="lang.select">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-switcher-label" id="langSwitcherLabel">PT</span>
+                                <i class="fas fa-chevron-down lang-switcher-chevron"></i>
+                            </button>
+                            <ul class="lang-switcher-menu" id="langSwitcherMenu" role="listbox">
+                                <li role="option"><button type="button" data-lang="pt" class="lang-option active" aria-selected="true">Português</button></li>
+                                <li role="option"><button type="button" data-lang="en" class="lang-option" aria-selected="false">English</button></li>
+                                <li role="option"><button type="button" data-lang="fr" class="lang-option" aria-selected="false">Français</button></li>
+                                <li role="option"><button type="button" data-lang="es" class="lang-option" aria-selected="false">Español</button></li>
+                            </ul>
+                        </div>
+                        <a href="wishlist.html" class="nav-btn wishlist-nav-btn" data-i18n-title="nav.wishlistTitle">
+                            <i class="fas fa-heart"></i>
+                            <span class="nav-btn-label" data-i18n="nav.wishlist">Desejos</span>
+                            <span class="wishlist-count" id="wishlistCount" style="display:none">0</span>
+                        </a>
+                        <a href="cliente.html" class="nav-btn client-nav-btn" id="clientNavBtn" data-i18n-title="nav.clientArea">
+                            <i class="fas fa-user"></i>
+                            <span class="nav-btn-label" id="clientNavLabel" data-i18n="nav.login">Entrar</span>
+                        </a>
+                        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-sm">
+        <div class="page-hero-bg">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80" alt="Termos de Uso">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="page-hero-content">
+            <h1><i class="fas fa-file-contract"></i> <span data-i18n="termos.heroTitle">Termos de Uso</span></h1>
+            <p data-i18n="termos.heroSubtitle">Condições para utilização do site e dos serviços IPTrip</p>
+            <div class="breadcrumb">
+                <a href="index.html" data-i18n="nav.home">Inicio</a> <i class="fas fa-chevron-right"></i> <span data-i18n="termos.heroTitle">Termos de Uso</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="section">
+        <div class="container">
+            <div class="legal-page">
+                <p class="legal-updated"><i class="fas fa-clock"></i> <span data-i18n="termos.lastUpdated">Última atualização: 20 de junho de 2026</span></p>
+                <p class="legal-intro" data-i18n="termos.intro">Estes Termos de Uso regulam o acesso e a utilização do site IPTrip.</p>
+
+                <div class="legal-section">
+                    <h2 data-i18n="termos.s1Title">1. Sobre o serviço</h2>
+                    <p data-i18n="termos.s1Body"></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2 data-i18n="termos.s2Title">2. Contas de utilizador</h2>
+                    <p data-i18n="termos.s2Body"></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2 data-i18n="termos.s3Title">3. Reservas e pagamentos</h2>
+                    <ul class="legal-list">
+                        <li data-i18n="termos.s3Item1"></li>
+                        <li data-i18n="termos.s3Item2"></li>
+                        <li data-i18n="termos.s3Item3"></li>
+                        <li data-i18n="termos.s3Item4"></li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2 data-i18n="termos.s4Title">4. Utilização aceitável</h2>
+                    <p data-i18n="termos.s4Body"></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2 data-i18n="termos.s5Title">5. Propriedade intelectual</h2>
+                    <p data-i18n="termos.s5Body"></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2 data-i18n="termos.s6Title">6. Limitação de responsabilidade</h2>
+                    <p data-i18n="termos.s6Body"></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2 data-i18n="termos.s7Title">7. Alterações aos termos</h2>
+                    <p data-i18n="termos.s7Body"></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2 data-i18n="termos.s8Title">8. Lei aplicável</h2>
+                    <p data-i18n="termos.s8Body"></p>
+                </div>
+
+                <div class="legal-section">
+                    <h2 data-i18n="termos.s9Title">9. Contacte-nos</h2>
+                    <p data-i18n="termos.s9Body"></p>
+                    <div class="legal-contact-box">
+                        <p><i class="fas fa-envelope"></i> iptrip.pap@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +351 913 520 306</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Rua das Viagens, 123, 1000-001 Lisboa, Portugal</p>
+                    </div>
+                </div>
+
+                <a href="politica-privacidade.html" class="legal-cross-link"><i class="fas fa-shield-halved"></i> <span data-i18n="footer.privacy">Política de Privacidade</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-plane-departure"></i>
+                        <span>IPTrip</span>
+                    </div>
+                    <p data-i18n="footer.about">A sua agência de viagens premium. Experiências únicas e personalizadas para os destinos mais incríveis.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.quickLinks">Links Rápidos</h4>
+                    <ul>
+                        <li><a href="destinos.html" data-i18n="nav.destinations">Destinos</a></li>
+                        <li><a href="pacotes.html" data-i18n="nav.packages">Pacotes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.support">Suporte</h4>
+                    <ul>
+                        <li><a href="contato.html" data-i18n="footer.helpCenter">Centro de Ajuda</a></li>
+                        <li><a href="politica-privacidade.html" data-i18n="footer.privacy">Política de Privacidade</a></li>
+                        <li><a href="termos-uso.html" data-i18n="footer.terms">Termos de Uso</a></li>
+                        <li><a href="contato.html#faq" data-i18n="footer.faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact">Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> iptrip.pap@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +351 913 520 306</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="common.copyright">&copy; 2024 IPTrip. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/currency.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-i18n-title="meta.confirmacaoTitle">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Reserva - IPTrip</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html" class="logo-link">
+                            <i class="fas fa-plane-departure logo-icon"></i>
+                            <span class="logo-text">IPTrip</span>
+                        </a>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="destinos.html" data-i18n="nav.destinations">Destinos</a></li>
+                        <li><a href="pacotes.html" data-i18n="nav.packages">Pacotes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contacto</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <div class="lang-switcher" id="langSwitcher">
+                            <button class="lang-switcher-btn nav-btn" id="langSwitcherBtn" type="button" aria-haspopup="listbox" aria-expanded="false" data-i18n-title="lang.select">
+                                <i class="fas fa-globe"></i>
+                                <span class="lang-switcher-label" id="langSwitcherLabel">PT</span>
+                                <i class="fas fa-chevron-down lang-switcher-chevron"></i>
+                            </button>
+                            <ul class="lang-switcher-menu" id="langSwitcherMenu" role="listbox">
+                                <li role="option"><button type="button" data-lang="pt" class="lang-option active" aria-selected="true">Português</button></li>
+                                <li role="option"><button type="button" data-lang="en" class="lang-option" aria-selected="false">English</button></li>
+                                <li role="option"><button type="button" data-lang="fr" class="lang-option" aria-selected="false">Français</button></li>
+                                <li role="option"><button type="button" data-lang="es" class="lang-option" aria-selected="false">Español</button></li>
+                            </ul>
+                        </div>
+                        <a href="wishlist.html" class="nav-btn wishlist-nav-btn" data-i18n-title="nav.wishlistTitle">
+                            <i class="fas fa-heart"></i>
+                            <span class="nav-btn-label" data-i18n="nav.wishlist">Desejos</span>
+                            <span class="wishlist-count" id="wishlistCount" style="display:none">0</span>
+                        </a>
+                        <a href="cliente.html" class="nav-btn client-nav-btn" id="clientNavBtn" data-i18n-title="nav.clientArea">
+                            <i class="fas fa-user"></i>
+                            <span class="nav-btn-label" id="clientNavLabel" data-i18n="nav.login">Entrar</span>
+                        </a>
+                        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-sm">
+        <div class="page-hero-bg">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80" alt="Confirmar Reserva">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="page-hero-content">
+            <h1><i class="fas fa-clipboard-check"></i> <span data-i18n="confirmacao.heroTitle">Confirmar Reserva</span></h1>
+            <p data-i18n="confirmacao.heroSubtitle">Revise os detalhes antes de avançar para o pagamento</p>
+        </div>
+    </section>
+
+    <!-- Checkout Steps -->
+    <section class="checkout-steps-section">
+        <div class="container">
+            <div class="checkout-steps">
+                <div class="checkout-step active">
+                    <span class="checkout-step-num">1</span>
+                    <span class="checkout-step-label" data-i18n="confirmacao.stepConfirm">Confirmação</span>
+                </div>
+                <div class="checkout-step-line"></div>
+                <div class="checkout-step">
+                    <span class="checkout-step-num">2</span>
+                    <span class="checkout-step-label" data-i18n="confirmacao.stepPayment">Pagamento</span>
+                </div>
+                <div class="checkout-step-line"></div>
+                <div class="checkout-step">
+                    <span class="checkout-step-num">3</span>
+                    <span class="checkout-step-label" data-i18n="confirmacao.stepDone">Concluído</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Content -->
+    <section class="section">
+        <div class="container">
+            <div class="confirmation-page" id="confirmationPage">
+                <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> <span data-i18n="common.loading">Carregando...</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-plane-departure"></i>
+                        <span>IPTrip</span>
+                    </div>
+                    <p data-i18n="footer.about">A sua agência de viagens premium. Experiências únicas e personalizadas para os destinos mais incríveis.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.quickLinks">Links Rápidos</h4>
+                    <ul>
+                        <li><a href="destinos.html" data-i18n="nav.destinations">Destinos</a></li>
+                        <li><a href="pacotes.html" data-i18n="nav.packages">Pacotes</a></li>
+                        <li><a href="contato.html" data-i18n="nav.contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.support">Suporte</h4>
+                    <ul>
+                        <li><a href="contato.html" data-i18n="footer.helpCenter">Centro de Ajuda</a></li>
+                        <li><a href="politica-privacidade.html" data-i18n="footer.privacy">Política de Privacidade</a></li>
+                        <li><a href="termos-uso.html" data-i18n="footer.terms">Termos de Uso</a></li>
+                        <li><a href="contato.html#faq" data-i18n="footer.faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact">Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> iptrip.pap@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +351 913 520 306</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="common.copyright">&copy; 2024 IPTrip. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/currency.js"></script>
+    <script src="js/confirmacao.js"></script>
+</body>
+</html>
